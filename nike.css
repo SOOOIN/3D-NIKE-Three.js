@@ -1,0 +1,137 @@
+body{
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    width: 80vw;
+
+}
+.nav-tittle{
+    
+}
+.nav{
+    align-items: center;
+    display: flex;
+    justify-content:space-between;
+}
+ul{   
+
+    list-style: none;
+    display: flex;
+}
+li{
+    color: rgb(110, 109, 109);
+    padding: 0.5em 0;
+    margin: 0 2em;
+   /* border: 1px solid #444; */
+}
+li:nth-child(2){
+    color: rgb(0, 0, 0)
+}
+li:nth-last-child(1){
+    background-color: black;
+    color: #fff;
+    width: 6vw;
+    text-align: center;
+   justify-content: center;
+}
+section{
+    display: flex;
+}
+.product-point-title{ color: rgb(255, 0, 55); margin: 0.5em 0;}
+.product-main-title{
+    font-size:xx-large;
+    font-weight: bold;
+}
+.product-sub-title{
+    color: rgb(146, 146, 146);
+
+}
+.product-price{    
+    font-weight: bold;
+}.product-price-text{
+    font-size:smaller;
+    text-align:end; 
+    color: rgb(146, 146, 146);
+}
+
+.product-category{
+    margin: 3em 0;
+
+}
+.product-content{
+margin-top: 6em;
+}
+.product-title-price{
+    display: flex;
+    justify-content: space-between;
+}
+.product-detail{}
+button{ border: 1.5px solid rgb(221, 221, 221); background-color: #fff;}
+.size{
+    border-radius: 50%;
+    width: 3em;
+    height: 3em;
+    margin-right: 3em;
+}
+.size-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 3em 0;
+    align-items: center;
+}
+.sizing-guide{
+    text-decoration:underline;
+}
+
+
+.color-choice{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-bottom: 0.8px solid rgb(221, 221, 221);
+}
+.reviews{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-bottom: 0.8px solid rgb(221, 221, 221);
+
+}
+.reviews-starts{
+    display: flex;
+}
+.delivery-info{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-bottom: 0.8px solid rgb(221, 221, 221);
+
+}
+.delivery-starts{
+    display: flex;
+    align-items: center;
+}
+article{width: 40vw;
+
+padding: 1em;
+}
+.button-container{
+display: flex;
+justify-content:space-evenly;
+margin-bottom: 3em;
+}
+.add-cart{
+flex: 1;
+margin-right: 0.5em;
+height: 4em;
+border-radius: 2px;
+}
+.purchase{flex: 1;
+    margin-left: 0.5em;
+    height: 4em;
+    border-radius: 2px;
+    background-color: black;
+    color: #fff;
+}

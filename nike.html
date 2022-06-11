@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="nike.css">
+    <title>NIKE</title>
+</head>
+<body>
+
+<div class="container">
+<nav id="nav">
+  <div class="nav">
+      <div class="nav-tittle">SHOESTOP</div>
+      <div class="nav-content">
+         <ul>
+             <li>Home</li>
+             <li>Showroom</li>
+             <li>About</li>
+             <li>Contact</li>
+             <li>Sign In</li>
+         </ul> 
+      </div>
+  </div> 
+</nav><!--상단 네비게이터-->
+
+<div class="product-category">
+    <span>Fashion Wear/</span>
+    <span>Jacket and Midi</span>
+</div>
+
+<section class="info-wrap_product"><!--본문내용을 감쌀 영역-->
+
+<article class="product-content"><!--3d img-->
+    <div class="side-bar"></div>
+<div class="img-wrap">
+    <div class="3d-img">
+    <canvas id="canvas" width="634" height="500"></canvas>
+    
+
+       
+    </div>
+    <div class="img-rotate"></div>
+    </div>
+</article>
+
+
+
+<article class="product-detail">
+
+    <div class="product-title-content">
+        <div class="product-point-title">HOTTEST TREND</div>
+        <div class="product-title-price">
+            <div class="product-main-title">Nike Epic React 2</div>
+            <diV class="product-price-info">
+                <div class="product-price" data-test="product-price">$ 3592.99</div>
+                <div class="product-price-text">Inc. taxes</div>
+            </diV>
+        </div>
+        <div class="product-sub-title">Nike advanced sportswear</div>
+    </div>
+    <div class="description-preview">
+        <p>The Nike React lineup embodies our desire for innovation. The Epic React 2 has been devloped using ethically harvested bio materials. It is made up of superior quality mycelium acquired from Scanadnavia.</p>
+    </div>
+
+<!--사이즈 버튼 -->
+    <div class="size-container">
+        <div class="select-size">
+            <button class="size">S</button>
+            <button class="size">M</button>
+            <button class="size">L</button>
+            <button class="size">XL</button>
+        </div>
+        <div class="sizing-guide">Sizing guide</div>
+    </div>
+   <div class="button-container">
+       <button class="add-cart">Add to Cart</button>
+       <button class="purchase">Proceed to Purchase</button>
+   </div>
+ <!----- -->  
+<div class="color-choice">
+    <div class="color-detail">Product Details</div>
+    <div class="color-starts">
+<div class="color-1"></div>
+<div class="color-2"></div>
+<div class="color-3"></div>
+<p>></p>
+    </div>
+</div>
+<!----- -->
+<div class="reviews">
+    <div class="reviews-title">Reviews<span>16</span></div>
+    <div class="reviews-starts">
+<p></p>
+<p>4.8</p>
+<p>></p>
+    </div>
+</div>
+<!----- -->
+<div class="delivery-info">
+    <div class="delivery-title">Delivery info</div>
+    <div class="delivery-starts">
+<div class="free-shipping">Free shipping</div>
+<p>></p>
+    </div>
+</div>
+
+</article>
+
+</section>
+</div>
+<script type="importmap">
+    {
+        "imports": {
+            "three": "https://unpkg.com/three@0.141.0/build/three.module.js",
+            "GLTFLoader" : "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+        }
+    }
+</script>
+<script type="module">
+    import {GLTFLoader} from 'GLTFLoader';
+    import * as THREE from 'three';
+
+    let scene = new THREE.Scene();
+    let renderer = new THREE.WebGLRenderer({
+        canvas: document.querySelector('#canvas'),
+        antialias: true
+    });
+
+    renderer.outputEncoding = THREE.sRGBEncoding;
+
+    let camera = new THREE.PerspectiveCamera(10,1.35);
+    camera.position.set(0,0,2);
+
+    scene.background = new THREE.Color('white')
+
+    let light = new THREE.HemisphereLight(0xffeeb1, 0x080820, 4);
+        scene.add(light);
+
+    let loader = new GLTFLoader();
+    loader.load('sneaker/scene.gltf', function(gltf) {
+        scene.add(gltf.scene);
+        gltf.scene.rotation.y = 3.5;
+        gltf.scene.rotation.x = 0.3;
+        gltf.scene.rotation.z = -0.5;
+        function animate() {
+            requestAnimationFrame(animate)
+
+//gltf.scene.rotation.y += 0.01;
+            renderer.render(scene, camera);
+        }
+        animate()
+    });
+
+</script>
+</body>
+</html>
