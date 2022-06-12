@@ -1,3 +1,6 @@
+*{
+    letter-spacing: 0.04em;
+}
 body{
     line-height: normal;
     display: flex;
@@ -8,9 +11,11 @@ body{
 
 }
 .nav-tittle{
-    
+   font-weight: bolder; 
+    letter-spacing: 0.1em;
 }
 .nav{
+    box-shadow:#e9defa  0px 0px 50px -12px;
     align-items: center;
     display: flex;
     justify-content:space-between;
@@ -36,6 +41,11 @@ li:nth-last-child(1){
     text-align: center;
    justify-content: center;
 }
+
+
+.product-category>span:nth-child(1){color: rgb(146, 146, 146);}
+
+
 section{
     display: flex;
 }
@@ -43,8 +53,65 @@ article{width: 40vw;
 
     padding: 1em;
     }
+canvas{
 
-.product-point-title{ color: rgb(255, 0, 55); margin: 0.5em 0;}
+}
+.side-bar{
+margin-top: 6vh;
+text-align: center;
+font-size:larger;
+color: rgba(110, 109, 109, 0.457);
+/*
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+*/
+/*
+    background-color: aqua;
+*/
+}
+
+.active,.side-bar>p:nth-last-child(1){
+    color: rgb(110, 109, 109);
+
+}
+
+.img-rotate{
+
+    display: flex;
+    justify-content: center;
+}
+
+.img-rotate>div:nth-child(1){
+border-radius: 100%; 
+border:2px dashed rgb(255, 255, 255);
+    position: absolute;
+    height: 10vh;
+    width: 27vw;
+    margin-top: -7%;
+    background-color: rgba(110, 109, 109, 0.29);
+    box-shadow:inset rgb(255, 255, 255) 10px 0px 30px 40px;
+    
+}
+/*------ 360도 버튼 영역 --------*/
+.img-rotate>div:nth-child(2){
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(110, 109, 109, 0.29);
+    border-radius: 100%;
+    width: 35px;
+    height:  35px;
+    position:sticky;
+    margin-top:-5vh;
+    text-align: center;
+    line-height: 3.5vh;
+    color:rgba(110, 109, 109, 0.29);
+}
+.img-rotate p{ 
+    color: #000;
+    margin-top: 0.4em;
+    margin-left: 0.1em;
+}
+.product-point-title{ color: rgb(255, 105, 123); margin: 0.5em 0;font-weight:350;}
 .product-main-title{
     font-size:xx-large;
     font-weight: bold;
@@ -54,7 +121,7 @@ article{width: 40vw;
 
 }
 .product-price{    
-    font-weight: bold;
+    font-weight:600;
 }.product-price-text{
     font-size:smaller;
     text-align:end; 
@@ -66,6 +133,7 @@ article{width: 40vw;
 
 }
 .product-content{
+display: flex;
 margin-top: 6em;
 }
 .product-title-price{
@@ -100,16 +168,14 @@ display: flex;
 justify-content:space-evenly;
 margin-bottom: 1.2em;
 }
-.add-cart{
+.add-cart,.purchase{
+    word-spacing: 0.2em;
 flex: 1;
 margin-right: 0.5em;
 height: 4em;
 border-radius: 2px;
 }
-.purchase{flex: 1;
-    margin-left: 0.5em;
-    height: 4em;
-    border-radius: 2px;
+.purchase{
     background-color: black;
     color: #fff;
 }
@@ -135,20 +201,26 @@ border-radius: 2px;
 
 }
 
-.color{
-    width: 2vw;
-    height: 2vh;
-    background-color: aqua;
+.colors{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin: 0 0.3em;
 }
-.reviews{
+.colors:nth-child(1){background-color: rgb(251, 109, 223);}
+.colors:nth-child(2){background-color: rgb(173, 90, 250);}
+.colors:nth-child(3){background-color: rgb(36, 202, 235);}
 
-
-}
 .reviews-title>span{
     color: rgb(110, 109, 109);
     margin-left: 0.5em;
 }
 .reviews-stars{
+}
+.reviews-stars>p:nth-child(1){
+    letter-spacing: 0.2em;
+    color: rgb(255, 126, 61);
+    margin-right: 0.5em;
 }
 .delivery-info{
 
@@ -160,6 +232,10 @@ border-radius: 2px;
 .free-shipping{ 
     color: rgb(35, 142, 80);
 }
-.free-shipping{
-    margin-right: 2em;
+ /* "뭐시기-stars" 디테일요소와 > 사이의 마진값 */
+.free-shipping,.reviews-stars>p:nth-child(2){
+    margin-right: 1.7em;
+}
+.colors:nth-child(3){
+    margin-right: 1.7em; /* .colors가 옆구리 마진을 0.3em 갖고있음 */
 }
