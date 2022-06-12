@@ -39,6 +39,11 @@ li:nth-last-child(1){
 section{
     display: flex;
 }
+article{width: 40vw;
+
+    padding: 1em;
+    }
+
 .product-point-title{ color: rgb(255, 0, 55); margin: 0.5em 0;}
 .product-main-title{
     font-size:xx-large;
@@ -68,12 +73,17 @@ margin-top: 6em;
     justify-content: space-between;
 }
 .product-detail{}
+
+
 button{ border: 1.5px solid rgb(221, 221, 221); background-color: #fff;}
 .size{
     border-radius: 50%;
     width: 3em;
     height: 3em;
     margin-right: 3em;
+}
+.size:nth-child(2){
+    border-color: black;
 }
 .size-container{
     display: flex;
@@ -85,42 +95,10 @@ button{ border: 1.5px solid rgb(221, 221, 221); background-color: #fff;}
     text-decoration:underline;
 }
 
-
-.color-choice{
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    border-bottom: 0.8px solid rgb(221, 221, 221);
-}
-.reviews{
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    border-bottom: 0.8px solid rgb(221, 221, 221);
-
-}
-.reviews-starts{
-    display: flex;
-}
-.delivery-info{
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    border-bottom: 0.8px solid rgb(221, 221, 221);
-
-}
-.delivery-starts{
-    display: flex;
-    align-items: center;
-}
-article{width: 40vw;
-
-padding: 1em;
-}
 .button-container{
 display: flex;
 justify-content:space-evenly;
-margin-bottom: 3em;
+margin-bottom: 1.2em;
 }
 .add-cart{
 flex: 1;
@@ -134,4 +112,54 @@ border-radius: 2px;
     border-radius: 2px;
     background-color: black;
     color: #fff;
+}
+
+
+.color-choice,.reviews,.delivery-info{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-bottom: 0.8px solid rgb(221, 221, 221);
+    height: 5em;
+}
+.color-stars,.reviews-stars,.delivery-stars{
+    display: flex;
+    align-items: center;
+
+}
+.color-choice{
+
+}
+.color-stars{
+  
+
+}
+
+.color{
+    width: 2vw;
+    height: 2vh;
+    background-color: aqua;
+}
+.reviews{
+
+
+}
+.reviews-title>span{
+    color: rgb(110, 109, 109);
+    margin-left: 0.5em;
+}
+.reviews-stars{
+}
+.delivery-info{
+
+
+}
+.delivery-stars{
+
+}
+.free-shipping{ 
+    color: rgb(35, 142, 80);
+}
+.free-shipping{
+    margin-right: 2em;
 }

@@ -36,10 +36,7 @@
     <div class="side-bar"></div>
 <div class="img-wrap">
     <div class="3d-img">
-    <canvas id="canvas" width="634" height="500"></canvas>
-    
-
-       
+    <canvas id="canvas" width="634" height="500"></canvas>     
     </div>
     <div class="img-rotate"></div>
     </div>
@@ -75,23 +72,23 @@
         <div class="sizing-guide">Sizing guide</div>
     </div>
    <div class="button-container">
-       <button class="add-cart">Add to Cart</button>
-       <button class="purchase">Proceed to Purchase</button>
+       <button class="add-cart">⏍ Add to Cart</button>
+       <button class="purchase">Proceed to Purchase →</button>
    </div>
  <!----- -->  
 <div class="color-choice">
     <div class="color-detail">Product Details</div>
-    <div class="color-starts">
-<div class="color-1"></div>
-<div class="color-2"></div>
-<div class="color-3"></div>
+    <div class="color-stars">
+<div class="color"></div>
+<div class="color"></div>
+<div class="color"></div>
 <p>></p>
     </div>
 </div>
 <!----- -->
 <div class="reviews">
     <div class="reviews-title">Reviews<span>16</span></div>
-    <div class="reviews-starts">
+    <div class="reviews-stars">
 <p></p>
 <p>4.8</p>
 <p>></p>
@@ -100,7 +97,7 @@
 <!----- -->
 <div class="delivery-info">
     <div class="delivery-title">Delivery info</div>
-    <div class="delivery-starts">
+    <div class="delivery-stars">
 <div class="free-shipping">Free shipping</div>
 <p>></p>
     </div>
@@ -147,7 +144,9 @@
         function animate() {
             requestAnimationFrame(animate)
 
-//gltf.scene.rotation.y += 0.01;
+ gltf.scene.rotation.y += 0.01;
+// gltf.scene.rotation.x += 0.01;
+
             renderer.render(scene, camera);
         }
         animate()
